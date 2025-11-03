@@ -1,0 +1,253 @@
+/* Colors Game Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(180deg, #87ceeb 0%, #4682b4 70%, #f4e4bc 100%);
+}
+
+/* Back Button */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 12px 20px;
+    min-height: 44px; /* Minimum touch target size (WCAG recommendation) */
+    min-width: 80px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    touch-action: manipulation; /* Prevents double-tap zoom on mobile */
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3); /* Better tap feedback */
+}
+
+.back-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Container */
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sky Background */
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(180deg, #87ceeb 0%, #4682b4 100%);
+    z-index: 1;
+}
+
+/* Instructions Surfboard */
+.instructions {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.instruction-board {
+    background: white;
+    border: 3px solid #333;
+    border-radius: 50px;
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: rotate(-2deg);
+}
+
+.instruction-board p {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+    margin: 2px 0;
+}
+
+/* Randomize Controls */
+.randomize-controls {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+}
+
+.randomize-btn {
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    min-height: 44px; /* Minimum touch target size (WCAG recommendation) */
+    min-width: 120px;
+    border-radius: 25px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    touch-action: manipulation; /* Prevents double-tap zoom on mobile */
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3); /* Better tap feedback */
+}
+
+.randomize-btn:hover {
+    background: #45b7aa;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.randomize-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Surfboards Container */
+.surfboards-container {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    gap: clamp(15px, 4vw, 40px);
+    align-items: flex-end;
+}
+
+/* Individual Surfboard */
+.surfboard {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.4));
+    touch-action: manipulation; /* Prevents double-tap zoom on mobile */
+    -webkit-tap-highlight-color: rgba(78, 205, 196, 0.3); /* Better tap feedback on mobile */
+}
+
+.surfboard:hover {
+    transform: translateY(-15px) scale(1.08);
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.5));
+}
+
+.surfboard:active {
+    transform: translateY(-8px) scale(1.04);
+}
+
+.surfboard-img {
+    width: clamp(120px, 18vw, 200px);
+    height: auto;
+    display: block;
+    min-width: 70px; /* Minimum touch target size for mobile */
+    min-height: 70px;
+}
+
+/* Sand Background */
+.sand-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.sand-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Fallback gradient in case SVG doesn't load */
+.sand-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #f4e4bc 0%, #deb887 50%, #cd853f 100%);
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .instruction-board {
+        padding: 15px 25px;
+        border-radius: 30px;
+    }
+    
+    .instruction-board p {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+    }
+    
+    .randomize-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .randomize-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .surfboards-container {
+        bottom: 3%;
+        gap: clamp(8px, 3vw, 25px);
+    }
+    
+    .surfboard-img {
+        width: clamp(90px, 15vw, 150px);
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .back-btn {
+        padding: 10px 18px; /* Increased padding for better touch target */
+        font-size: 14px;
+        min-height: 44px; /* Ensure minimum touch target */
+        min-width: 70px;
+    }
+    
+    .surfboards-container {
+        bottom: 2%;
+        gap: clamp(8px, 2.5vw, 15px); /* Slightly larger gap for better touch separation */
+    }
+    
+    .surfboard-img {
+        width: clamp(80px, 13vw, 120px); /* Increased minimum for better touch target */
+        min-width: 80px;
+        min-height: 80px;
+    }
+    
+    .randomize-btn {
+        padding: 12px 24px;
+        min-height: 44px;
+        min-width: 140px;
+    }
+}

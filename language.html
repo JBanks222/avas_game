@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Words - Learning Islands</title>
+    <link rel="stylesheet" href="language.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back to home">
+        🏠 Home
+    </button>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- Sky Background -->
+        <div class="sky"></div>
+        
+        <!-- Instructions -->
+        <div class="instructions">
+            <div class="instruction-board">
+                <p>Click a word card to</p>
+                <p>hear it pronounced</p>
+            </div>
+        </div>
+
+        <!-- Randomize Button -->
+        <div class="randomize-controls">
+            <button id="randomizeBtn" class="randomize-btn" aria-label="Randomize words">
+                🎲 Randomize Words
+            </button>
+        </div>
+
+        <!-- Word Cards Container -->
+        <div class="words-container">
+            <div id="word1" class="word-card" data-word="">
+                <div class="word-text"></div>
+            </div>
+            <div id="word2" class="word-card" data-word="">
+                <div class="word-text"></div>
+            </div>
+            <div id="word3" class="word-card" data-word="">
+                <div class="word-text"></div>
+            </div>
+            <div id="word4" class="word-card" data-word="">
+                <div class="word-text"></div>
+            </div>
+            <div id="word5" class="word-card" data-word="">
+                <div class="word-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="language.js"></script>
+</body>
+</html>
+

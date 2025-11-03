@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals - Learning Islands</title>
+    <link rel="stylesheet" href="animals.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back to home">
+        🏠 Home
+    </button>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- Sky Background -->
+        <div class="sky"></div>
+        
+        <!-- Instructions -->
+        <div class="instructions">
+            <div class="instruction-board">
+                <p>Click an animal card to</p>
+                <p>hear its sound</p>
+            </div>
+        </div>
+
+        <!-- Randomize Button -->
+        <div class="randomize-controls">
+            <button id="randomizeBtn" class="randomize-btn" aria-label="Randomize animals">
+                🎲 Randomize Animals
+            </button>
+        </div>
+
+        <!-- Animal Cards Container -->
+        <div class="animals-container">
+            <div id="animal1" class="animal-card" data-animal="">
+                <div class="animal-image"></div>
+            </div>
+            <div id="animal2" class="animal-card" data-animal="">
+                <div class="animal-image"></div>
+            </div>
+            <div id="animal3" class="animal-card" data-animal="">
+                <div class="animal-image"></div>
+            </div>
+            <div id="animal4" class="animal-card" data-animal="">
+                <div class="animal-image"></div>
+            </div>
+            <div id="animal5" class="animal-card" data-animal="">
+                <div class="animal-image"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="animals.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors Explorer - Learning Islands</title>
+    <link rel="stylesheet" href="colors.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back to home">
+        🏠 Home
+    </button>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- Sky Background -->
+        <div class="sky"></div>
+        
+        <!-- Instructions Surfboard -->
+        <div class="instructions">
+            <div class="instruction-board">
+                <p>Click a surfboard to</p>
+                <p>hear its color</p>
+            </div>
+        </div>
+
+        <!-- Randomize Button -->
+        <div class="randomize-controls">
+            <button id="randomizeBtn" class="randomize-btn" aria-label="Randomize colors">
+                🎲 Randomize Colors
+            </button>
+        </div>
+
+        <!-- Surfboards Container -->
+        <div class="surfboards-container">
+            <div id="surfboard1" class="surfboard" data-color="">
+                <img src="" alt="Surfboard" class="surfboard-img">
+            </div>
+            <div id="surfboard2" class="surfboard" data-color="">
+                <img src="" alt="Surfboard" class="surfboard-img">
+            </div>
+            <div id="surfboard3" class="surfboard" data-color="">
+                <img src="" alt="Surfboard" class="surfboard-img">
+            </div>
+            <div id="surfboard4" class="surfboard" data-color="">
+                <img src="" alt="Surfboard" class="surfboard-img">
+            </div>
+            <div id="surfboard5" class="surfboard" data-color="">
+                <img src="" alt="Surfboard" class="surfboard-img">
+            </div>
+        </div>
+
+        <!-- Sand Background -->
+        <div class="sand-background">
+            <img src="assets/beach_stuff/sand.svg" alt="Sand" class="sand-image">
+        </div>
+    </div>
+
+    <script src="colors.js"></script>
+</body>
+</html>

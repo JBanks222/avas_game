@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes - Learning Islands</title>
+    <link rel="stylesheet" href="shapes.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back to home">
+        🏠 Home
+    </button>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- Sky Background -->
+        <div class="sky"></div>
+        
+        <!-- Instructions -->
+        <div class="instructions">
+            <div class="instruction-board">
+                <p>Click a shape card to</p>
+                <p>hear its name</p>
+            </div>
+        </div>
+
+        <!-- Randomize Button -->
+        <div class="randomize-controls">
+            <button id="randomizeBtn" class="randomize-btn" aria-label="Randomize shapes">
+                🎲 Randomize Shapes
+            </button>
+        </div>
+
+        <!-- Shape Cards Container -->
+        <div class="shapes-container">
+            <div id="shape1" class="shape-card" data-shape="">
+                <div class="shape-visual"></div>
+            </div>
+            <div id="shape2" class="shape-card" data-shape="">
+                <div class="shape-visual"></div>
+            </div>
+            <div id="shape3" class="shape-card" data-shape="">
+                <div class="shape-visual"></div>
+            </div>
+            <div id="shape4" class="shape-card" data-shape="">
+                <div class="shape-visual"></div>
+            </div>
+            <div id="shape5" class="shape-card" data-shape="">
+                <div class="shape-visual"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="shapes.js"></script>
+</body>
+</html>
+
