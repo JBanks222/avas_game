@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Madness - Learning Islands</title>
+  <link rel="stylesheet" href="math.css">
+</head>
+
+<body>
+  <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back to home">
+    🏝️ Exit Island
+  </button>
+
+  <main class="feed" role="main" aria-live="polite">
+    <section class="challenge-card visual-card" aria-label="Visual brain rot counting challenge">
+      <header class="card-header">
+        <span class="live-pill" aria-hidden="true">LIVE</span>
+        <span class="streak" data-visual-streak>Streak: 0</span>
+      </header>
+
+      <div class="visual-prompt focus-target" data-visual-prompt>Count the characters</div>
+
+      <div class="visual-grid" data-visual-grid aria-live="polite"></div>
+
+      <div class="count-options" data-count-options role="group" aria-label="Choose the number of characters"></div>
+
+      <footer class="card-footer">
+        <span class="caption" data-visual-caption>Spot the clones and tap the count.</span>
+        <span class="tags" aria-hidden="true">#brainrot #counting #dopamine</span>
+      </footer>
+    </section>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span class="scroll-text">scroll for speed math chaos</span>
+      <span class="scroll-arrows">▼▼▼</span>
+    </div>
+
+    <section class="challenge-card math-card" aria-label="Rapid fire math challenge">
+      <header class="card-header">
+        <span class="live-pill" aria-hidden="true">LIVE</span>
+        <span class="streak" data-streak>Streak: 0</span>
+      </header>
+
+      <div class="problem-display focus-target" data-problem>0 + 0</div>
+
+      <div class="answer-zone">
+        <input id="answerInput" class="answer-input" type="text" inputmode="numeric" pattern="[0-9\-]*"
+          autocomplete="off" placeholder="Type the answer" aria-label="Type your answer">
+        <button id="submitBtn" class="submit-btn" type="button">send it ➤</button>
+      </div>
+
+      <footer class="card-footer">
+        <span class="caption" data-caption>Can you keep the streak alive?</span>
+        <span class="tags" aria-hidden="true">#mathTok #brainrot #speedrun</span>
+      </footer>
+    </section>
+
+    <div class="scroll-hint bottom" aria-hidden="true">
+      <span class="scroll-text">you reached the end — refresh for more chaos</span>
+      <span class="scroll-arrows">▲</span>
+    </div>
+
+    <div class="shock-overlay" aria-hidden="true">
+      <img src="assets/brain_rot/Shocked_Black_Guy.jpg" alt="">
+    </div>
+  </main>
+
+  <script src="math.js"></script>
+</body>
+
+</html>
